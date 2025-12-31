@@ -1,13 +1,12 @@
-<!doctype html>
+<!-- index.html -->
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ajay Kumar Maurya — Portfolio</title>
-  <meta name="description" content="Portfolio website of Ajay Kumar Maurya — Software Engineer (OCI, Data Engineering, Python)." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ajay Kumar Maurya | Software Engineer & CS Tutor</title>
+  <meta name="description" content="Portfolio of Ajay Kumar Maurya — Software Engineer (Oracle India) and Online CS Tutor. Projects, skills, teaching, and contact." />
+  <link rel="icon" href="myimage.jpg" />
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -18,151 +17,161 @@
   <!-- Header -->
   <header class="header" id="top">
     <div class="container header__inner">
-      <a class="brand" href="#top" aria-label="Go to top">
-        <span class="brand__dot"></span>
-        <span class="brand__text">Ajay</span>
+      <a class="logo" href="#top" aria-label="Go to top">
+        <span class="logo__mark">A</span>
+        <span class="logo__text">Ajay Kumar Maurya</span>
       </a>
 
-      <nav class="nav" id="nav" aria-label="Main navigation">
-        <a class="nav__link" href="#about">About</a>
-        <a class="nav__link" href="#skills">Skills</a>
-        <a class="nav__link" href="#projects">Projects</a>
-        <a class="nav__link" href="#experience">Experience</a>
-        <a class="nav__link" href="#contact">Contact</a>
+      <nav class="nav" aria-label="Primary navigation">
+        <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav__list" id="navList">
+          <li><a class="nav__link" href="#about">About</a></li>
+          <li><a class="nav__link" href="#skills">Skills</a></li>
+          <li><a class="nav__link" href="#projects">Projects</a></li>
+          <li><a class="nav__link" href="#tutoring">Tutoring</a></li>
+          <li><a class="nav__link" href="#experience">Experience</a></li>
+          <li><a class="nav__link" href="#certifications">Certifications</a></li>
+          <li><a class="nav__link" href="#contact">Contact</a></li>
+          <li>
+            <button class="chip chip--btn" id="themeToggle" type="button" aria-label="Toggle theme">
+              🌙
+            </button>
+          </li>
+        </ul>
       </nav>
-
-      <div class="header__actions">
-        <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">
-          <span class="icon" aria-hidden="true">🌙</span>
-        </button>
-
-        <button class="icon-btn burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-          <span class="burger__line"></span>
-          <span class="burger__line"></span>
-          <span class="burger__line"></span>
-        </button>
-      </div>
-    </div>
-
-    <!-- Mobile menu -->
-    <div class="mobile" id="mobileMenu" hidden>
-      <div class="container mobile__inner">
-        <a class="mobile__link" href="#about">About</a>
-        <a class="mobile__link" href="#skills">Skills</a>
-        <a class="mobile__link" href="#projects">Projects</a>
-        <a class="mobile__link" href="#experience">Experience</a>
-        <a class="mobile__link" href="#contact">Contact</a>
-        <div class="mobile__divider"></div>
-        <a class="btn btn--primary btn--block" href="#contact">Hire / Collaborate</a>
-      </div>
     </div>
   </header>
 
+  <!-- Hero -->
   <main>
-    <!-- Hero -->
     <section class="hero">
       <div class="container hero__grid">
-        <div class="hero__left reveal">
-          <p class="pill">Software Engineer • OCI • Data Engineering • Python</p>
+        <div class="hero__left">
+          <p class="badge">Software Engineer • Online CS Tutor</p>
           <h1 class="hero__title">
-            Hi, I’m <span class="grad">Ajay Kumar Maurya</span>.
-            I build reliable cloud + data solutions and love clean engineering.
+            Building clean, reliable systems — and teaching fundamentals the right way.
           </h1>
-          <p class="hero__desc">
-            I work on OCI administration, data pipelines, automation (Python/Selenium), and ETL/analytics workflows.
-            I also teach Engineering Mathematics & CS subjects online.
+
+          <p class="hero__subtitle">
+            I’m <strong>Ajay Kumar Maurya</strong>, a Software Engineer at <strong>Oracle India</strong>.
+            I also teach computer science & engineering math with a strong focus on clarity, intuition, and practice.
           </p>
 
           <div class="hero__cta">
-            <a class="btn btn--primary" href="#projects">View Projects</a>
+            <a class="btn" href="#projects">View Projects</a>
+            <a class="btn" href="#top">Resume</a>
             <a class="btn btn--ghost" href="#contact">Contact Me</a>
-            <a class="btn btn--soft" id="resumeBtn" href="#" download>Download Resume</a>
           </div>
 
           <div class="hero__meta">
-            <a class="link" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <div class="metaCard">
+              <span class="metaCard__label">Current Focus</span>
+              <span class="metaCard__value">Backend Engineering • Cloud Architecture • OCI</span>
+            </div>
+            <div class="metaCard">
+              <span class="metaCard__label">Teaching Focus</span>
+              <span class="metaCard__value">DSA • CS Core • Math</span>
+            </div>
+            <div class="metaCard">
+              <span class="metaCard__label">Based In</span>
+              <span class="metaCard__value">Hyderabad, India</span>
+            </div>
+          </div>
+
+          <div class="social">
+            <a class="social__link" href="https://www.geeksforgeeks.org/profile/itsmaurya" target="_blank" rel="noreferrer">GeeksforGeeks</a>
             <span class="dot">•</span>
-            <a class="link" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="social__link" href="#" target="_blank" rel="noreferrer">GitHub</a>
             <span class="dot">•</span>
-            <a class="link" href="mailto:ajaykrsoe@gmail.com">ajaykrsoe@gmail.com</a>
-            <span class="dot">•</span>
-            <a class="link" href="tel:9334181125">9334181125</a>
+            <a class="social__link" href="https://www.linkedin.com/in/imajaykumarmaurya/" target="_blank" rel="noreferrer">LinkedIn</a>
           </div>
         </div>
 
-        <aside class="hero__right reveal">
-          <figure class="portrait">
-            <img src="myimage.jpg" alt="Ajay Kumar Maurya" loading="lazy" decoding="async" />
-          </figure>
-          <div class="card card--hero">
-            <div class="card__top">
-              <div class="avatar" aria-hidden="true">AK</div>
-              <div>
-                <p class="card__title">Currently</p>
-                <p class="card__subtitle">Building & learning daily</p>
+        <div class="hero__right">
+          <div class="avatarCard">
+            <img class="avatar" src="myimage.jpg" alt="Ajay Kumar Maurya" />
+            <div class="avatarCard__info">
+              <div class="avatarCard__name">Ajay Kumar Maurya</div>
+              <div class="avatarCard__role">Software Engineer @ Oracle India</div>
+              <div class="avatarCard__tags">
+                <span class="chip">Python</span>
+                <span class="chip">SQL</span>
+                <span class="chip">OCI</span>
+                <span class="chip">FastAPI</span>
+                <span class="chip">Java</span>
+                <span class="chip">Spring Boot</span>
+                <span class="chip">Microservices</span>
+                <span class="chip">Django</span>
+                <span class="chip">Cloud (OCI, AWS)</span>
+                <span class="chip">Networking</span>
+                <span class="chip">DSA</span>
+                <span class="chip">System Design (HLD &amp; LLD)</span>
               </div>
-            </div>
-            <div class="card__stats">
-              <div class="stat">
-                <p class="stat__k">Focus</p>
-                <p class="stat__v">Cloud • Data • Automation</p>
-              </div>
-              <div class="stat">
-                <p class="stat__k">Location</p>
-                <p class="stat__v">India</p>
-              </div>
-              <div class="stat">
-                <p class="stat__k">Open to</p>
-                <p class="stat__v">SDE / Backend / Data</p>
-              </div>
-            </div>
-            <div class="card__footer">
-              <a class="btn btn--primary btn--block" href="#contact">Let’s work together</a>
             </div>
           </div>
-        </aside>
+
+          <div class="quoteCard">
+            <p class="quote">
+              “Consistency beats intensity. I build systems with discipline — and teach the same mindset.”
+            </p>
+          </div>
+        </div>
       </div>
+
+      <div class="hero__bg"></div>
     </section>
 
     <!-- About -->
     <section class="section" id="about">
       <div class="container">
-        <div class="section__head reveal">
-          <h2 class="section__title">About</h2>
-          <p class="section__desc">A quick snapshot of who I am and how I work.</p>
+        <div class="section__head">
+          <h2>About</h2>
+          <p>Quick snapshot of who I am and what I do.</p>
         </div>
 
-        <div class="grid-2">
-          <div class="panel reveal">
-            <h3 class="panel__title">What I do</h3>
-            <p class="panel__text">
-              I design and build cloud-ready systems: data pipelines, automation tools, and integrations.
-              I like projects that demand clarity, performance, and long-term maintainability.
+        <div class="grid grid--2">
+          <div class="card">
+            <h3>Software Engineering</h3>
+            <p>
+              I build backend-heavy platforms end-to-end — from API design and microservices to cloud
+              infrastructure automation, observability, and performance tuning.
             </p>
-            <ul class="bullets">
-              <li>OCI administration + networking basics</li>
-              <li>Python automation (Selenium, APIs, scripting)</li>
-              <li>SQL + ETL (ODI, GoldenGate) and data quality checks</li>
-              <li>Teaching & mentoring (Math + CS)</li>
+            <ul class="list">
+              <li>Python/FastAPI + Java/Spring Boot services with clean REST contracts and auth.</li>
+              <li>OCI & AWS certified: multi-tier architecture, Terraform, networking, monitoring.</li>
+              <li>DevOps mindset: CI/CD, scripting, SQL/ETL integration, and automation workflows.</li>
             </ul>
           </div>
 
-          <div class="panel reveal">
-            <h3 class="panel__title">Highlights</h3>
-            <div class="highlights">
-              <div class="highlight">
-                <p class="highlight__k">Automation Impact</p>
-                <p class="highlight__v">Reduced manual testing effort significantly using Selenium frameworks</p>
-              </div>
-              <div class="highlight">
-                <p class="highlight__k">Data Engineering</p>
-                <p class="highlight__v">Built pipelines for backup/sync and controlled table/column filtration</p>
-              </div>
-              <div class="highlight">
-                <p class="highlight__k">Teaching</p>
-                <p class="highlight__v">Online tutoring for Math & CS with structured notes and practice sets</p>
-              </div>
-            </div>
+          <div class="card">
+            <h3>Teaching & Tutoring</h3>
+            <p>
+              I help students connect CS fundamentals with real software development using lots of
+              examples + practice + structured feedback.
+            </p>
+            <ul class="list">
+              <li>Beginner → Advanced (step-by-step learning)</li>
+              <li>DSA for interviews, debugging & problem solving</li>
+              <li>Math + CS core (clean intuition-first approach)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="strip">
+          <div class="strip__item">
+            <span class="strip__label">Education</span>
+            <span class="strip__value">B.Tech — School of Engineering, Kochi (Kerala)</span>
+          </div>
+          <div class="strip__item">
+            <span class="strip__label">Started at Oracle</span>
+            <span class="strip__value">Campus Placement (2022)</span>
+          </div>
+          <div class="strip__item">
+            <span class="strip__label">Interests</span>
+            <span class="strip__value">Teaching • Fitness • Travel • Books</span>
           </div>
         </div>
       </div>
@@ -171,13 +180,76 @@
     <!-- Skills -->
     <section class="section" id="skills">
       <div class="container">
-        <div class="section__head reveal">
-          <h2 class="section__title">Skills</h2>
-          <p class="section__desc">Tools and technologies I use often.</p>
+        <div class="section__head">
+          <h2>Skills</h2>
+          <p>Tools and areas I work with regularly.</p>
         </div>
 
-        <div class="chips reveal" id="skillsChips" aria-label="Skills list">
-          <!-- Filled by JS -->
+        <div class="grid grid--3">
+          <div class="card card--soft">
+            <h3>Core Subjects</h3>
+            <div class="chips">
+              <span class="chip">Data Structures</span>
+              <span class="chip">Algorithms</span>
+              <span class="chip">DBMS</span>
+              <span class="chip">Networking</span>
+              <span class="chip">Operating Systems</span>
+              <span class="chip">Cloud Computing</span>
+              <span class="chip">Machine Learning</span>
+            </div>
+          </div>
+
+          <div class="card card--soft">
+            <h3>Languages & Web</h3>
+            <div class="chips">
+              <span class="chip">Python</span>
+              <span class="chip">C</span>
+              <span class="chip">C++</span>
+              <span class="chip">Java</span>
+              <span class="chip">HTML</span>
+              <span class="chip">CSS</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">REST APIs</span>
+            </div>
+          </div>
+
+          <div class="card card--soft">
+            <h3>Frameworks</h3>
+            <div class="chips">
+              <span class="chip">FastAPI</span>
+              <span class="chip">Django</span>
+              <span class="chip">Flask</span>
+              <span class="chip">Spring Boot</span>
+            </div>
+          </div>
+
+          <div class="card card--soft">
+            <h3>DevOps</h3>
+            <div class="chips">
+              <span class="chip">Docker</span>
+              <span class="chip">Kubernetes</span>
+              <span class="chip">Jenkins</span>
+              <span class="chip">Terraform</span>
+              <span class="chip">CI/CD</span>
+            </div>
+          </div>
+
+          <div class="card card--soft">
+            <h3>Tools</h3>
+            <div class="chips">
+              <span class="chip">Git</span>
+              <span class="chip">GitHub</span>
+              <span class="chip">Linux</span>
+              <span class="chip">SQL Developer</span>
+              <span class="chip">VS Code</span>
+            </div>
+          </div>
+
+          <div class="card card--soft">
+            <h3>Cloud Platforms</h3>
+            <p class="muted small">OCI services: Compute/VM, Functions, Object Storage, VCN, Gateways, Load Balancer, Data Flow, Data Integration, OIC, ATP, GoldenGate, 23AI DB, Event Services.</p>
+            <p class="muted small">AWS services: EC2, S3, Lambda, API Gateway, IAM, VPC Networking.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -185,17 +257,205 @@
     <!-- Projects -->
     <section class="section" id="projects">
       <div class="container">
-        <div class="section__head reveal">
-          <h2 class="section__title">Projects</h2>
-          <p class="section__desc">A few things I’ve built. Filter by category.</p>
+        <div class="section__head">
+          <h2>Projects</h2>
+          <p>A few projects (you can keep adding more cards easily).</p>
         </div>
 
-        <div class="filters reveal" role="group" aria-label="Project filters" id="projectFilters">
-          <!-- Filled by JS -->
+        <div class="grid grid--3" id="projectsGrid">
+          <!-- JS can also inject projects, but these static ones are fine -->
+          <article class="card project">
+            <div class="project__top">
+              <h3>Enterprise Cloud Infra Setup</h3>
+              <span class="tag">Cloud Architecture</span>
+            </div>
+            <p>
+              Designed a secure, multi-tier OCI architecture for an enterprise application, covering VCN layout,
+              load balancing, autoscaling, and observability so teams could roll out faster.
+            </p>
+            <div class="chips chips--sm">
+              <span class="chip">OCI</span>
+              <span class="chip">Terraform</span>
+              <span class="chip">Load Balancing</span>
+              <span class="chip">Monitoring</span>
+            </div>
+            <div class="project__links">
+              <a href="#" class="link">Architecture</a>
+              <a href="#" class="link">Runbook</a>
+            </div>
+          </article>
+
+          <article class="card project">
+            <div class="project__top">
+              <h3>Oracle ATP Backup Pipeline</h3>
+              <span class="tag">Data Engineering</span>
+            </div>
+            <p>
+              Built a pipeline to back up Oracle ATP databases with table/column filtering for different apps.
+              Focused on reliability and automation.
+            </p>
+            <div class="chips chips--sm">
+              <span class="chip">Python</span>
+              <span class="chip">OCI</span>
+              <span class="chip">Oracle ATP</span>
+              <span class="chip">GoldenGate</span>
+            </div>
+            <div class="project__links">
+              <a href="#" class="link">Case Study</a>
+              <a href="#" class="link">Code</a>
+            </div>
+          </article>
+
+          <article class="card project">
+            <div class="project__top">
+              <h3>FastAPI Web Service on OCI</h3>
+              <span class="tag">Backend Platform</span>
+            </div>
+            <p>
+              Built and deployed a FastAPI microservice on Oracle Cloud VMs to serve secure REST endpoints for internal customers.
+              Added auth layers, transformation pipelines, and logging so data consumers could integrate cleanly with enterprise systems.
+            </p>
+            <div class="chips chips--sm">
+              <span class="chip">Python</span>
+              <span class="chip">FastAPI</span>
+              <span class="chip">OCI Compute</span>
+              <span class="chip">REST APIs</span>
+            </div>
+            <div class="project__links">
+              <a href="#" class="link">Service Outline</a>
+              <a href="#" class="link">Deployment Notes</a>
+            </div>
+          </article>
+
+          <article class="card project">
+            <div class="project__top">
+              <h3>Enterprise SaaS Automation Mesh</h3>
+              <span class="tag">Integration Automation</span>
+            </div>
+            <p>
+              Wired OCI Functions + Python lambdas to fire secure API calls into SaaS and on-prem apps whenever finance events hit.
+              Used event routing, OAuth tokens, and retry logic to keep systems synchronized without manual ops.
+            </p>
+            <div class="chips chips--sm">
+              <span class="chip">Python</span>
+              <span class="chip">OCI Functions</span>
+              <span class="chip">Oracle Integration Cloud</span>
+              <span class="chip">Event-Driven</span>
+              <span class="chip">OAuth</span>
+            </div>
+            <div class="project__links">
+              <a href="#" class="link">Event Model</a>
+              <a href="#" class="link">Integration Plan</a>
+            </div>
+          </article>
+
+          <article class="card project">
+            <div class="project__top">
+              <h3>Subscription Management Backend</h3>
+              <span class="tag">Java • Spring Boot</span>
+            </div>
+            <p>
+              Engineered a Spring Boot service that powers credit-card subscriptions for SaaS customers:
+              secure onboarding, plan lifecycle automation, proration, and PCI-compliant payment hooks.
+              Exposed REST APIs for CRM, billing, and analytics teams.
+            </p>
+            <div class="chips chips--sm">
+              <span class="chip">Java</span>
+              <span class="chip">Spring Boot</span>
+              <span class="chip">Microservices</span>
+              <span class="chip">Payments</span>
+              <span class="chip">MySQL</span>
+            </div>
+            <div class="project__links">
+              <a href="#" class="link">Architecture</a>
+              <a href="#" class="link">Payment Flow</a>
+            </div>
+          </article>
+
+          <article class="card project">
+            <div class="project__top">
+              <h3>Portfolio Website</h3>
+              <span class="tag">Web</span>
+            </div>
+            <p>
+              Clean and responsive portfolio with sections for projects, tutoring services, and contact.
+              Deployable to Netlify/GitHub Pages.
+            </p>
+            <div class="chips chips--sm">
+              <span class="chip">HTML</span>
+              <span class="chip">CSS</span>
+              <span class="chip">JavaScript</span>
+            </div>
+            <div class="project__links">
+              <a href="#" class="link">Live</a>
+              <a href="#" class="link">Code</a>
+            </div>
+          </article>
         </div>
 
-        <div class="cards reveal" id="projectGrid" aria-live="polite">
-          <!-- Filled by JS -->
+        <div class="note">
+          Tip: Replace “#” links with your real GitHub/LinkedIn/Live links.
+        </div>
+      </div>
+    </section>
+
+    <!-- Tutoring -->
+    <section class="section" id="tutoring">
+      <div class="container">
+        <div class="section__head">
+          <h2>Tutoring</h2>
+          <p>One-on-one sessions (beginner → advanced), tailored to your level.</p>
+        </div>
+
+        <div class="grid grid--2">
+          <div class="card">
+            <h3>I can help you with</h3>
+            <ul class="list">
+              <li>Programming: C, C++, Java, Python, JavaScript</li>
+              <li>DSA: arrays, linked lists, trees, graphs, recursion, DP</li>
+              <li>CS core: OOP, DBMS, OS basics, networking basics</li>
+              <li>Web: HTML, CSS, JavaScript, React basics</li>
+              <li>Backend: REST APIs, microservices basics</li>
+              <li>Databases: SQL (Oracle/MySQL/PostgreSQL)</li>
+              <li>Interview prep: problem-solving + debugging + clean code</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>How sessions work</h3>
+            <div class="steps">
+              <div class="step">
+                <span class="step__num">1</span>
+                <div>
+                  <strong>Goal alignment</strong>
+                  <p>We choose the topic + level and make a small weekly plan.</p>
+                </div>
+              </div>
+              <div class="step">
+                <span class="step__num">2</span>
+                <div>
+                  <strong>Concept + example</strong>
+                  <p>Simple explanation, then a real-world style example.</p>
+                </div>
+              </div>
+              <div class="step">
+                <span class="step__num">3</span>
+                <div>
+                  <strong>Practice + feedback</strong>
+                  <p>You solve, I review, and we fix mistakes properly.</p>
+                </div>
+              </div>
+              <div class="step">
+                <span class="step__num">4</span>
+                <div>
+                  <strong>Homework + revision</strong>
+                  <p>Small tasks + revision so it stays in your head.</p>
+                </div>
+              </div>
+            </div>
+
+            <a class="btn btn--wide" href="#contact">Book a Session</a>
+          </div>
         </div>
       </div>
     </section>
@@ -203,89 +463,196 @@
     <!-- Experience -->
     <section class="section" id="experience">
       <div class="container">
-        <div class="section__head reveal">
-          <h2 class="section__title">Experience</h2>
-          <p class="section__desc">Where I’ve worked and what I focused on.</p>
+        <div class="section__head">
+          <h2>Experience</h2>
+          <p>Where I’ve worked and what I’ve done.</p>
         </div>
 
-        <div class="timeline reveal" id="timeline">
-          <!-- Filled by JS -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="section__head reveal">
-          <h2 class="section__title">Contact</h2>
-          <p class="section__desc">Send a message. This form opens your email app (no backend needed).</p>
-        </div>
-
-        <div class="grid-2">
-          <div class="panel reveal">
-            <h3 class="panel__title">Let’s connect</h3>
-            <p class="panel__text">
-              If you have a role, project, or collaboration idea, send details and I’ll reply.
-            </p>
-
-            <div class="contact__links">
-              <a class="contact__link" href="mailto:ajaykrsoe@gmail.com">📩 ajaykrsoe@gmail.com</a>
-              <a class="contact__link" href="tel:9334181125">📞 9334181125</a>
-              <a class="contact__link" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">💼 LinkedIn</a>
-              <a class="contact__link" href="https://github.com/" target="_blank" rel="noreferrer">🧩 GitHub</a>
+          <div class="timeline">
+            <div class="timeline__item card">
+              <div class="timeline__top">
+                <h3>Software Engineer — Oracle India</h3>
+                <span class="muted">2022 → Present</span>
             </div>
+            <ul class="list">
+              <li>Worked on cloud + automation tasks in OCI environments</li>
+              <li>SQL analysis, pipelines and operational support</li>
+              <li>Built automation utilities and reduced manual effort</li>
+            </ul>
           </div>
 
-          <form class="form reveal" id="contactForm">
-            <label class="field">
-              <span class="field__label">Name</span>
-              <input class="field__input" name="name" type="text" placeholder="Your name" required />
-            </label>
+            <div class="timeline__item card">
+              <div class="timeline__top">
+                <h3>Online Tutor — CS & Engineering Math</h3>
+                <span class="muted">Part-time</span>
+              </div>
+            <ul class="list">
+              <li>1:1 sessions focused on fundamentals and problem solving</li>
+              <li>Interview prep (DSA), coding practice, debugging guidance</li>
+              <li>Structured notes + assignments + review</li>
+              </ul>
+            </div>
 
-            <label class="field">
-              <span class="field__label">Email</span>
-              <input class="field__input" name="email" type="email" placeholder="you@example.com" required />
-            </label>
+            <div class="timeline__item card">
+              <div class="timeline__top">
+                <h3>Mathematics Tutor — LearnersNote</h3>
+                <span class="muted">Mar 2019 → Apr 2022 · Part-time · Remote (Dubai, United Arab Emirates)</span>
+              </div>
+              <ul class="list">
+                <li>Taught high school and engineering mathematics, turning dense theory into easy-to-follow lessons.</li>
+                <li>Designed practice-heavy sessions to sharpen problem solving and analytical thinking.</li>
+                <li>Built a supportive remote classroom culture that kept diverse learners on track.</li>
+                <li><strong>Focus:</strong> Engineering Mathematics, Discrete Mathematics, Problem-Solving Skills</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
-            <label class="field">
-              <span class="field__label">Message</span>
-              <textarea class="field__input field__input--area" name="message" rows="5" placeholder="Write your message..." required></textarea>
-            </label>
+      <!-- Licenses & Certifications -->
+      <section class="section" id="certifications">
+        <div class="container">
+          <div class="section__head">
+            <h2>Licenses & Certifications</h2>
+            <p>Key credentials that back my cloud, backend, and teaching focus.</p>
+          </div>
 
-            <button class="btn btn--primary btn--block" type="submit">Send</button>
-            <p class="form__hint" id="formHint" role="status" aria-live="polite"></p>
+          <div class="grid grid--3">
+            <article class="card">
+              <div class="tag">AWS</div>
+              <h3>AWS Certified Cloud Practitioner</h3>
+            </article>
+
+            <article class="card">
+              <div class="tag">Oracle</div>
+              <h3>OCI 2023 Certified Architect Associate</h3>
+              <p class="small muted">Issued Feb 2024</p>
+            </article>
+
+            <article class="card">
+              <div class="tag">Oracle</div>
+              <h3>OCI 2023 AI Certified Foundations Associate</h3>
+              <p class="small muted">Issued Oct 2023</p>
+            </article>
+
+            <article class="card">
+              <div class="tag">Oracle</div>
+              <h3>Oracle Certified Professional: Java SE 11 Developer</h3>
+              <p class="small muted">Oracle University</p>
+            </article>
+
+            <article class="card">
+              <div class="tag">Oracle</div>
+              <h3>Oracle Cloud Data Management</h3>
+              <p class="small muted">Issued May 2023</p>
+            </article>
+
+            <article class="card">
+              <div class="tag">Oracle</div>
+              <h3>Oracle Cloud Platform App Integration 2022 Certified Professional</h3>
+              <p class="small muted">Issued Jan 2023 · Expires Jan 2025</p>
+            </article>
+
+            <article class="card">
+              <div class="tag">Oracle</div>
+              <h3>Oracle Cloud Infrastructure Foundation</h3>
+              <p class="small muted">Issued Nov 2022 · Expires Nov 2024</p>
+            </article>
+
+            <article class="card">
+              <div class="tag">Udemy</div>
+              <h3>Django Full Stack Web Developer Bootcamp</h3>
+              <p class="small muted">Issued Jan 2023</p>
+            </article>
+
+            <article class="card">
+              <div class="tag">Udemy</div>
+              <h3>Data Structures &amp; Algorithms</h3>
+              <p class="small muted">Issued Dec 2022</p>
+            </article>
+
+            <article class="card">
+              <div class="tag">HackerRank</div>
+              <h3>Problem Solving</h3>
+              <p class="small muted">Issued Dec 2022</p>
+            </article>
+
+            <article class="card">
+              <div class="tag">HackerRank</div>
+              <h3>Python</h3>
+              <p class="small muted">Issued Dec 2022</p>
+            </article>
+
+            <article class="card">
+              <div class="tag">HackerRank</div>
+              <h3>SQL</h3>
+              <p class="small muted">Issued Dec 2022</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="section" id="contact">
+      <div class="container">
+        <div class="section__head">
+          <h2>Contact</h2>
+          <p>Send a message — for collaboration or tutoring.</p>
+        </div>
+
+        <div class="grid grid--2">
+          <div class="card">
+            <h3>Quick links</h3>
+            <div class="contactLinks">
+              <a class="contactLink" href="https://www.geeksforgeeks.org/profile/itsmaurya" target="_blank" rel="noreferrer">
+                <span>GeeksforGeeks</span><span class="muted">Profile</span>
+              </a>
+              <a class="contactLink" href="https://www.linkedin.com/in/ajaykumarmaurya" target="_blank" rel="noreferrer">
+                <span>LinkedIn</span><span class="muted">Connect</span>
+              </a>
+              <a class="contactLink" href="#" target="_blank" rel="noreferrer">
+                <span>GitHub</span><span class="muted">Projects</span>
+              </a>
+              <a class="contactLink" href="tel:+919334181125">
+                <span>Mobile</span><span class="muted">9334181125</span>
+              </a>
+            </div>
+
+            <div class="divider"></div>
+            <p class="muted small">
+            </p>
+          </div>
+
+          <!-- Netlify-ready form: works when deployed on Netlify -->
+          <form class="card form" name="contact" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact" />
+            <div class="form__row">
+              <label>
+                Name
+                <input name="name" type="text" placeholder="Your name" required />
+              </label>
+            </div>
+            <div class="form__row">
+              <label>
+                Message
+                <textarea name="message" rows="5" placeholder="Tell me what you need..." required></textarea>
+              </label>
+            </div>
+            <button class="btn btn--wide" type="submit">Send Message</button>
+            <p class="muted small">No spam. I’ll reply as soon as I can.</p>
           </form>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="footer">
     <div class="container footer__inner">
-      <p>© <span id="year"></span> Ajay Kumar Maurya</p>
+      <p>© <span id="year"></span> Ajay Kumar Maurya. All rights reserved.</p>
       <a class="link" href="#top">Back to top ↑</a>
     </div>
   </footer>
-
-  <!-- Project Modal -->
-  <dialog class="modal" id="projectModal" aria-labelledby="modalTitle">
-    <div class="modal__card">
-      <div class="modal__head">
-        <h3 class="modal__title" id="modalTitle">Project</h3>
-        <button class="icon-btn" id="modalClose" aria-label="Close project details">✕</button>
-      </div>
-
-      <p class="modal__desc" id="modalDesc"></p>
-
-      <div class="modal__tags" id="modalTags"></div>
-
-      <div class="modal__actions">
-        <a class="btn btn--primary" id="modalLive" href="#" target="_blank" rel="noreferrer">Live</a>
-        <a class="btn btn--ghost" id="modalCode" href="#" target="_blank" rel="noreferrer">Code</a>
-      </div>
-    </div>
-  </dialog>
 
   <script src="script.js"></script>
 </body>
