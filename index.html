@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ajay Kumar Maurya — Portfolio</title>
+  <meta name="description" content="Portfolio website of Ajay Kumar Maurya — Software Engineer (OCI, Data Engineering, Python)." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Top progress bar -->
+  <div class="progress" id="progress"></div>
+
+  <!-- Header -->
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="Go to top">
+        <span class="brand__dot"></span>
+        <span class="brand__text">Ajay</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Main navigation">
+        <a class="nav__link" href="#about">About</a>
+        <a class="nav__link" href="#skills">Skills</a>
+        <a class="nav__link" href="#projects">Projects</a>
+        <a class="nav__link" href="#experience">Experience</a>
+        <a class="nav__link" href="#contact">Contact</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">
+          <span class="icon" aria-hidden="true">🌙</span>
+        </button>
+
+        <button class="icon-btn burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile" id="mobileMenu" hidden>
+      <div class="container mobile__inner">
+        <a class="mobile__link" href="#about">About</a>
+        <a class="mobile__link" href="#skills">Skills</a>
+        <a class="mobile__link" href="#projects">Projects</a>
+        <a class="mobile__link" href="#experience">Experience</a>
+        <a class="mobile__link" href="#contact">Contact</a>
+        <div class="mobile__divider"></div>
+        <a class="btn btn--primary btn--block" href="#contact">Hire / Collaborate</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__left reveal">
+          <p class="pill">Software Engineer • OCI • Data Engineering • Python</p>
+          <h1 class="hero__title">
+            Hi, I’m <span class="grad">Ajay Kumar Maurya</span>.
+            I build reliable cloud + data solutions and love clean engineering.
+          </h1>
+          <p class="hero__desc">
+            I work on OCI administration, data pipelines, automation (Python/Selenium), and ETL/analytics workflows.
+            I also teach Engineering Mathematics & CS subjects online.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#projects">View Projects</a>
+            <a class="btn btn--ghost" href="#contact">Contact Me</a>
+            <a class="btn btn--soft" id="resumeBtn" href="#" download>Download Resume</a>
+          </div>
+
+          <div class="hero__meta">
+            <a class="link" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <span class="dot">•</span>
+            <a class="link" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+            <span class="dot">•</span>
+            <a class="link" href="mailto:ajaykrsoe@gmail.com">ajaykrsoe@gmail.com</a>
+            <span class="dot">•</span>
+            <a class="link" href="tel:9334181125">9334181125</a>
+          </div>
+        </div>
+
+        <aside class="hero__right reveal">
+          <div class="card card--hero">
+            <div class="card__top">
+              <div class="avatar" aria-hidden="true">AK</div>
+              <div>
+                <p class="card__title">Currently</p>
+                <p class="card__subtitle">Building & learning daily</p>
+              </div>
+            </div>
+            <div class="card__stats">
+              <div class="stat">
+                <p class="stat__k">Focus</p>
+                <p class="stat__v">Cloud • Data • Automation</p>
+              </div>
+              <div class="stat">
+                <p class="stat__k">Location</p>
+                <p class="stat__v">India</p>
+              </div>
+              <div class="stat">
+                <p class="stat__k">Open to</p>
+                <p class="stat__v">SDE / Backend / Data</p>
+              </div>
+            </div>
+            <div class="card__footer">
+              <a class="btn btn--primary btn--block" href="#contact">Let’s work together</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2 class="section__title">About</h2>
+          <p class="section__desc">A quick snapshot of who I am and how I work.</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="panel reveal">
+            <h3 class="panel__title">What I do</h3>
+            <p class="panel__text">
+              I design and build cloud-ready systems: data pipelines, automation tools, and integrations.
+              I like projects that demand clarity, performance, and long-term maintainability.
+            </p>
+            <ul class="bullets">
+              <li>OCI administration + networking basics</li>
+              <li>Python automation (Selenium, APIs, scripting)</li>
+              <li>SQL + ETL (ODI, GoldenGate) and data quality checks</li>
+              <li>Teaching & mentoring (Math + CS)</li>
+            </ul>
+          </div>
+
+          <div class="panel reveal">
+            <h3 class="panel__title">Highlights</h3>
+            <div class="highlights">
+              <div class="highlight">
+                <p class="highlight__k">Automation Impact</p>
+                <p class="highlight__v">Reduced manual testing effort significantly using Selenium frameworks</p>
+              </div>
+              <div class="highlight">
+                <p class="highlight__k">Data Engineering</p>
+                <p class="highlight__v">Built pipelines for backup/sync and controlled table/column filtration</p>
+              </div>
+              <div class="highlight">
+                <p class="highlight__k">Teaching</p>
+                <p class="highlight__v">Online tutoring for Math & CS with structured notes and practice sets</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2 class="section__title">Skills</h2>
+          <p class="section__desc">Tools and technologies I use often.</p>
+        </div>
+
+        <div class="chips reveal" id="skillsChips" aria-label="Skills list">
+          <!-- Filled by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2 class="section__title">Projects</h2>
+          <p class="section__desc">A few things I’ve built. Filter by category.</p>
+        </div>
+
+        <div class="filters reveal" role="group" aria-label="Project filters" id="projectFilters">
+          <!-- Filled by JS -->
+        </div>
+
+        <div class="cards reveal" id="projectGrid" aria-live="polite">
+          <!-- Filled by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2 class="section__title">Experience</h2>
+          <p class="section__desc">Where I’ve worked and what I focused on.</p>
+        </div>
+
+        <div class="timeline reveal" id="timeline">
+          <!-- Filled by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2 class="section__title">Contact</h2>
+          <p class="section__desc">Send a message. This form opens your email app (no backend needed).</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="panel reveal">
+            <h3 class="panel__title">Let’s connect</h3>
+            <p class="panel__text">
+              If you have a role, project, or collaboration idea, send details and I’ll reply.
+            </p>
+
+            <div class="contact__links">
+              <a class="contact__link" href="mailto:ajaykrsoe@gmail.com">📩 ajaykrsoe@gmail.com</a>
+              <a class="contact__link" href="tel:9334181125">📞 9334181125</a>
+              <a class="contact__link" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">💼 LinkedIn</a>
+              <a class="contact__link" href="https://github.com/" target="_blank" rel="noreferrer">🧩 GitHub</a>
+            </div>
+          </div>
+
+          <form class="form reveal" id="contactForm">
+            <label class="field">
+              <span class="field__label">Name</span>
+              <input class="field__input" name="name" type="text" placeholder="Your name" required />
+            </label>
+
+            <label class="field">
+              <span class="field__label">Email</span>
+              <input class="field__input" name="email" type="email" placeholder="you@example.com" required />
+            </label>
+
+            <label class="field">
+              <span class="field__label">Message</span>
+              <textarea class="field__input field__input--area" name="message" rows="5" placeholder="Write your message..." required></textarea>
+            </label>
+
+            <button class="btn btn--primary btn--block" type="submit">Send</button>
+            <p class="form__hint" id="formHint" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> Ajay Kumar Maurya</p>
+      <a class="link" href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- Project Modal -->
+  <dialog class="modal" id="projectModal" aria-labelledby="modalTitle">
+    <div class="modal__card">
+      <div class="modal__head">
+        <h3 class="modal__title" id="modalTitle">Project</h3>
+        <button class="icon-btn" id="modalClose" aria-label="Close project details">✕</button>
+      </div>
+
+      <p class="modal__desc" id="modalDesc"></p>
+
+      <div class="modal__tags" id="modalTags"></div>
+
+      <div class="modal__actions">
+        <a class="btn btn--primary" id="modalLive" href="#" target="_blank" rel="noreferrer">Live</a>
+        <a class="btn btn--ghost" id="modalCode" href="#" target="_blank" rel="noreferrer">Code</a>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
