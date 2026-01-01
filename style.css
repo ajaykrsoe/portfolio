@@ -390,14 +390,58 @@ img{ max-width: 100%; display:block; }
   border-radius: var(--radius);
   background: linear-gradient(145deg, rgba(255,255,255,0.10), rgba(255,255,255,0.03));
   border: 1px solid rgba(255,255,255,0.18);
-  overflow:hidden;
+  overflow: visible;
   box-shadow: 0 20px 45px rgba(0,0,0,0.55);
   animation: floatCard 8s ease-in-out infinite;
 }
+.avatarBadge{
+  position: relative;
+  width: min(320px, 100%);
+  margin: 0 auto 12px;
+  padding: 22px;
+  border-radius: 50%;
+  background: conic-gradient(from 210deg, #0d7238, #14b867, #22c55e, #0d7238);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow: 0 25px 45px rgba(17,94,56,0.45);
+}
+.avatarBadge::before{
+  content:"";
+  position:absolute;
+  inset: 16px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.35), transparent 60%);
+  filter: blur(12px);
+  opacity: 0.6;
+  z-index: 0;
+  mix-blend-mode: screen;
+}
 .avatar{
-  width:100%;
-  aspect-ratio: 4/3;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
   object-fit: cover;
+  border: 4px solid rgba(255,255,255,0.95);
+  position: relative;
+  z-index: 1;
+  box-shadow: inset 0 0 25px rgba(0,0,0,0.35);
+}
+.avatarBadge__label{
+  position:absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 6px 18px;
+  border-radius: 999px;
+  background: linear-gradient(130deg, #4ade80, #16a34a);
+  color: #041b0c;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  box-shadow: 0 12px 30px rgba(34,197,94,0.45);
+  z-index: 2;
 }
 .avatarCard__info{ padding: 14px; position: relative; z-index: 1; }
 .avatarCard__name{ font-weight: 800; font-size: 18px; }
