@@ -87,3 +87,46 @@ function updateProgress() {
 }
 window.addEventListener("scroll", updateProgress);
 updateProgress();
+
+// Contact form: WhatsApp validation + success message
+const contactForm = document.querySelector('form[name="contact"]');
+const whatsappCode = document.getElementById("whatsappCode");
+const whatsappNumber = document.getElementById("whatsappNumber");
+const whatsappFull = document.getElementById("whatsappFull");
+
+function normalizePhone(value) {
+  return value.replace(/\D/g, "");
+}
+
+function validateWhatsapp() {
+  if (!whatsappNumber) return true;
+  const digits = normalizePhone(whatsappNumber.value);
+  if (digits !== whatsappNumber.value) {
+    whatsappNumber.value = digits;
+  }
+  if (!digits) {
+    whatsappNumber.setCustomValidity("Please enter your WhatsApp number.");
+    return false;
+  }
+  if (digits.length < 7 || digits.length > 15) {
+    whatsappNumber.setCustomValidity("Please enter a valid WhatsApp number (7-15 digits).");
+    return false;
+  }
+  whatsappNumber.setCustomValidity("");
+  return true;
+}
+
+whatsappNumber?.addEventListener("input", validateWhatsapp);
+
+contactForm?.addEventListener("submit", (e) => {
+  const isValidPhone = validateWhatsapp();
+  const isValidForm = contactForm.reportValidity();
+  if (!isValidPhone || !isValidForm) {
+    e.preventDefault();
+    return;
+  }
+  if (whatsappFull && whatsappCode && whatsappNumber) {
+    whatsappFull.value = `${whatsappCode.value}${normalizePhone(whatsappNumber.value)}`;
+  }
+  alert("Message has been sent successfully");
+});

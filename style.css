@@ -563,8 +563,27 @@ img{ max-width: 100%; display:block; }
   color: var(--text);
   outline: none;
 }
+.form select{
+  width: 100%;
+  margin-top: 6px;
+  padding: 11px 12px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  outline: none;
+}
 .form input:focus, .form textarea:focus{
   border-color: rgba(255,255,255,0.30);
+}
+.form select:focus{
+  border-color: rgba(255,255,255,0.30);
+}
+.form__split{
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 10px;
+  align-items: center;
 }
 .small{ font-size: 12px; }
 .muted{ color: var(--muted); }
@@ -610,6 +629,7 @@ img{ max-width: 100%; display:block; }
   .hero__meta{ grid-template-columns: 1fr; }
   .grid--3{ grid-template-columns: 1fr; }
   .grid--2{ grid-template-columns: 1fr; }
+  .form__split{ grid-template-columns: 1fr; }
 }
 
 @media (max-width: 760px){
