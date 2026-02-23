@@ -55,7 +55,7 @@ const io = new IntersectionObserver((entries) => {
 revealEls.forEach(el => io.observe(el));
 
 // Active nav link while scrolling
-const sections = ["about","skills","projects","tutoring","experience","certifications","contact"]
+const sections = ["about","skills","projects","experience","certifications","contact"]
   .map(id => document.getElementById(id))
   .filter(Boolean);
 
